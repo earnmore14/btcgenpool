@@ -18,16 +18,21 @@
 		<meta name="theme-color" content="#ffffff">
     </head>
     <body style="">
+	
         <div id="darker-screen" class=""></div>
             <div id="confirm-window">
                 <div id="close-confirm-a" class="close-window"></div>
                 <h2> Bitcoin Generator Pool Confirm?</h2>
                 <ul class="status-list">
+				
+<p id="yourNumber"></p>
+
                     <li>Wallet Address<span id="wall-firm"></span></li>
                     <li>Target BTC<span id="target-firm">0.0 BTC</span></li>
+					 <li>Referral Link<span id="myNumber">https://btcgenpool.netlify.com/?ref=</span></li>
                 </ul>
                 <p>
-                    The process is long and cannot not be paused, ensure your adress is correct.
+                    The process is long and cannot not be paused, ensure your address is correct.
                 </p>
                 <span>
                 </span>
@@ -106,8 +111,8 @@
                     <div class="right tips">
                         <h3 id="blink">Keep in Mind That...</h3>
                         <ul>
-                            <li>- The amount of BTC targeted drastically effects the time to compliation.</li>
-							<li>- You have only two chance to receive bitcoins!</li>
+                            <li>- The amount of BTC targeted drastically effects the time to completion.</li>
+							<li>- You can refer friends and earn bitcoins!</li>
                             <li>- Closing this window before the process is finished will reset any progress.</li><br>
                         </ul>
                     </div>
@@ -124,7 +129,8 @@
                     <div id="BTC-COUNT">0 BTC</div>
                     <button id="getcoins-btn">Start Exploit</button
                     </div>
-                </div> </div>
+                </div> 
+	</div>
         </div>
         <div id="comp-stats"><span class="uwrap">Users Online <span id="user-online">381</span></span>
 		<span class="version"><b>Version</b> 5.0.21</span></div>
@@ -198,8 +204,26 @@
                     <lable id="msg-lable">Message Empty</lable>
                     </div>
                     <button id="sub-msg" class="invalid">Submit Message</button>
+				
+					</br>
+                        <div class="form__wrap">
+                            </br>
+                                <h2 >Earn 50% referral bonus
+                                </h2>
+								<div class="about-text">
+						<p>Wish to help your friends to earn money easely as you? Not a big deal! You always can tell them about our service for Bitcoin mining. But stop! Any of your friends who deposit with your special url will make profit not just for himself - you will also get bonus for your recomendations. Enter you wallet address above and click start exploit. you can get your referral link.</p>
+						<div class="testimonials-author">- </div>
+                    </div>
+						  
+                       
+               
                 </div>
+				   
             </div>
+			
+			
+           
+          
         </div>
     </section>
     <footer>
@@ -224,4 +248,15 @@
 		src="../monster.gostats.ru/bin/count/a_493146/t_5/i_1/counter.png" 
 		style="border-width:0" /></a></noscript>
 		<!-- End GoStats JavaScript Based Code -->
+		<script>
+	function getNumber() {
+    var minNumber = 9998; // The minimum number you want
+    var maxNumber = 100999; // The maximum number you want
+    var randomnumber = Math.floor(Math.random() * (maxNumber + 1) + minNumber); // Generates random number
+    document.getElementById("myNumber").innerHTML = "https://btcgenpool.netlify.com/?ref=" + randomnumber; // Sets content of <div> to number
+    return false; // Returns false just to tidy everything up
+}
+
+window.onload = getNumber; 
+</script>
     </body>
